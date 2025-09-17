@@ -76,3 +76,10 @@ list list_pair(list p, list q) {
     list first_pair = cons(car(p), cons(car(q), null()));
     return cons(first_pair, list_pair(cdr(p), cdr(q)));
 }
+
+list firsts(list p) {
+    if (is_null(p)) 
+        return null(); 
+
+    return cons(car(car(p)), firsts(cdr(p)));
+}

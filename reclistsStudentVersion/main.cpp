@@ -25,5 +25,10 @@ int main()
 
     std::cout << "list_pair(p, q): ";
     write_list(list_pair(p, q));
+
+    std::cout << "firsts(p): ";
+    write_list(firsts(p));
+
+    
     return 0;
 }
