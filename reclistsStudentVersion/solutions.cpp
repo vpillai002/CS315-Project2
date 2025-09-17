@@ -46,3 +46,18 @@ bool is_lat(list p) {
     return is_lat(cdr(p)); // recurisvely iterate through rest of list p
 }  
 
+bool member(list p, list q) {
+    if (is_null(q))
+        return false; 
+
+    if (is_atom(car(q))) {
+        if (eq(p, car(q))) 
+            return true; 
+    }
+    else {
+        if (member(p, car(q)))
+            return true; 
+    }
+
+    return member(p, cdr(q)); 
+}
