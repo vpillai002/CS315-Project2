@@ -68,3 +68,11 @@ list last(list p) {
     
     return last(cdr(p)); 
 }
+
+list list_pair(list p, list q) {
+    if (is_null(p) || is_null(q)) 
+        return null(); 
+
+    list first_pair = cons(car(p), cons(car(q), null()));
+    return cons(first_pair, list_pair(cdr(p), cdr(q)));
+}

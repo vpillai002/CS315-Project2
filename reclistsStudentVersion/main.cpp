@@ -22,6 +22,8 @@ int main()
     cout << "\nis_lat(p): " << (is_lat(p) ? "true" : "false") << endl;
     cout << "last(p): ";
     write_list(last(p));
-    
+
+    std::cout << "list_pair(p, q): ";
+    write_list(list_pair(p, q));
     return 0;
 }
