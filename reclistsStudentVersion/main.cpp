@@ -20,6 +20,8 @@ int main()
     write_list(q);
 
     cout << "\nis_lat(p): " << (is_lat(p) ? "true" : "false") << endl;
+    cout << "last(p): ";
+    write_list(last(p));
     
     return 0;
 }

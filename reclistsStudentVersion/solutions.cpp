@@ -61,3 +61,10 @@ bool member(list p, list q) {
 
     return member(p, cdr(q)); 
 }
+
+list last(list p) {
+    if (is_null(cdr(p))) 
+        return car(p); 
+    
+    return last(cdr(p)); 
+}
