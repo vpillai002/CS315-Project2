@@ -36,3 +36,13 @@ list reverseTopLevel(list p) {
     return append(cons(car(p), null()), reverseTopLevel(cdr(p)));
 }
 
+bool is_lat(list p) {
+    if (is_null(p))
+        return true; // empty list is a lat
+    
+    if (!is_atom(car(p)))
+        return false; // found a "not atom"
+    
+    return is_lat(cdr(p)); // recurisvely iterate through rest of list p
+}  
+

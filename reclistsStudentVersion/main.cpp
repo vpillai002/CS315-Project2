@@ -2,14 +2,24 @@
 #include"reclists.hpp"
 #include"solutions.hpp"
 
+using namespace std;
+
 int main()
 {
 
-    std::cout << "Enter a list: ";
+    cout << "Enter first list: ";
     list p = read_list();
-    std::cout << "Echoing the list that you entered below." << std::endl;
+    cout << "Enter second list: ";
+    list q = read_list();
+
+    cout << "---Testing Functions---\n";
+
+    cout << "Echoing p: " << endl;
     write_list(p);
-    std::cout << "The number of nodes at the top level of the input list is: "
-        << numNodesAtTheTopLevel(p) << std::endl;
+    cout << "Echoing q: " << endl;
+    write_list(q);
+
+    cout << "\nis_lat(p): " << (is_lat(p) ? "true" : "false") << endl;
+    
     return 0;
 }
