@@ -51,12 +51,134 @@ void test_list_pair() {
     write_list(list_pair(p, q));
 }
 
+void test_firsts() {
+    cout << "Enter testing list p: ";
+    list p = read_list();
+    cout << "Echoing p: ";
+    write_list(p);
+
+    cout << "Result: ";
+    write_list(firsts(p));
+}
+
+void test_flat() {
+    cout << "Enter testing list p: ";
+    list p = read_list();
+    cout << "Echoing p: ";
+    write_list(p);
+
+    cout << "Result: ";
+    write_list(flat(p));
+}
+
+void test_two_the_same() {
+    cout << "Enter testing atom p: ";
+    list p = read_list();
+    cout << "Echoing p:";
+    write_list(p);
+
+    cout << "Enter testing list q: ";
+    list q = read_list();
+    cout << "Echoing q:";
+    write_list(q);
+
+    cout << (two_the_same(p, q) ? "True!" : "False!") << endl;
+}
+
+void test_equal() {
+    cout << "Enter testing atom p: ";
+    list p = read_list();
+    cout << "Echoing p:";
+    write_list(p);
+
+    cout << "Enter testing list q: ";
+    list q = read_list();
+    cout << "Echoing q:";
+    write_list(q);
+
+    cout << (equal(p, q) ? "True!" : "False!") << endl;
+}
+
+void test_total_reverse() {
+    cout << "Enter testing list p: ";
+    list p = read_list();
+    cout << "Echoing p: ";
+    write_list(p);
+
+    cout << "Result: ";
+    write_list(total_reverse(p));
+}
+
+void test_shape() {
+    cout << "Enter testing list p: ";
+    list p = read_list();
+    cout << "Echoing p: ";
+    write_list(p);
+
+    cout << "Result: ";
+    write_list(shape(p));
+}
+
+void test_intersection() {
+    cout << "Enter testing list p: ";
+    list p = read_list();
+    cout << "Echoing p: ";
+    write_list(p);
+
+    cout << "Enter testing list q: ";
+    list q = read_list();
+    cout << "Echoing q: ";
+    write_list(q);
+
+    cout << "Result: ";
+    write_list(intersection(p, q));
+}
+
+void test_list_union() {
+    cout << "Enter testing list p: ";
+    list p = read_list();
+    cout << "Echoing p: ";
+    write_list(p);
+
+    cout << "Enter testing list q: ";
+    list q = read_list();
+    cout << "Echoing q: ";
+    write_list(q);
+
+    cout << "Result: ";
+    write_list(list_union(p, q));
+}
+
+void test_subset() {
+    cout << "Enter testing atom p: ";
+    list p = read_list();
+    cout << "Echoing p:";
+    write_list(p);
+
+    cout << "Enter testing list q: ";
+    list q = read_list();
+    cout << "Echoing q:";
+    write_list(q);
+
+    cout << (subset(p, q) ? "True!" : "False!") << endl;
+}
+
 int main()
 {
     // test_is_lat();
     // test_member();
     // test_last();
-    test_list_pair();
+    // test_list_pair();
+    // test_firsts();
+    // test_flat();
+    // test_two_the_same(); // Should both lists be just lists of atoms 
+    // test_equal();
+    // test_total_reverse();
+    // test_shape(); // should atoms be () or no
+    // test_intersection();
+    // test_list_union();
+    test_subset(); // DOES NOT WORK NEEDS FIXING
+    
 
     return 0;
 }
