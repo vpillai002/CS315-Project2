@@ -51,16 +51,20 @@ bool member(list p, list q) {
         return false; 
 
     if (is_atom(car(q))) {
-        if (eq(p, car(q))) 
+        if (eq(p, car(q))) {
             return true; 
+        }
     }
     else {
-        if (member(p, car(q)))
+        if (member(p, car(q))) {
             return true; 
+        }
     }
 
     return member(p, cdr(q)); 
 }
+
+
 
 list last(list p) {
     if (is_null(cdr(p))) 
