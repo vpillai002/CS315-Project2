@@ -51,14 +51,12 @@ bool member(list p, list q) {
         return false; 
 
     if (is_atom(car(q))) {
-        if (eq(p, car(q))) {
+        if (eq(p, car(q))) 
             return true; 
-        }
     }
     else {
-        if (member(p, car(q))) {
+        if (member(p, car(q))) 
             return true; 
-        }
     }
 
     return member(p, cdr(q)); 
@@ -77,8 +75,7 @@ list list_pair(list p, list q) {
     if (is_null(p) || is_null(q)) 
         return null(); 
 
-    list first_pair = cons(car(p), cons(car(q), null()));
-    return cons(first_pair, list_pair(cdr(p), cdr(q)));
+    return cons(cons(car(p), cons(car(q), null())), list_pair(cdr(p), cdr(q)));
 }
 
 list firsts(list p) {
@@ -92,11 +89,10 @@ list flat(list p) {
     if (is_null(p)) 
         return null();
 
-    list head = car(p);
-    if (is_atom(head)) 
-        return cons(head, flat(cdr(p)));
+    if (is_atom(car(p))) 
+        return cons(car(p), flat(cdr(p)));
     else 
-        return append(flat(head), flat(cdr(p)));
+        return append(flat(car(p)), flat(cdr(p)));
 }
 
 bool two_the_same(list p, list q) {
@@ -121,24 +117,22 @@ bool equal(list p, list q) {
 
 list total_reverse(list p) {
     if (is_null(p))
-        return null();
+        return null(); // empty list
     
-    list head = car(p);
-    list tail = total_reverse(cdr(p));
+    if (is_atom(p))
+        return p; // list is just an atom
 
-    if (!is_atom(head))
-        head = total_reverse(head);
-    
-    return append(tail, cons(head, null()));
+    return append(total_reverse(cdr(p)), cons(total_reverse(car(p)), null()));
 }
 
 list shape(list p) {
-    if (is_null(p)) 
+    if (is_null(p) || is_atom(p)) 
         return null();
+
+    if (is_atom(car(p)))
+        return shape(cdr(p));
     
-    list head = car(p);
-    list shaped_head = is_atom(head) ? null() : shape(head);
-    return cons(shaped_head, shape(cdr(p)));
+    return cons(shape(car(p)), shape(cdr(p)));
 }
 
 list intersection(list p, list q) {
@@ -161,6 +155,14 @@ list list_union(list p, list q) {
     return cons(car(p), list_union(cdr(p), q));
 }
 
+list substitute(list old, list replace, list p) {
+
+}
+
+list remove(list p, list a) {
+
+}
+
 bool subset(list p, list q) {
     if (is_null(p))
         return true; 
@@ -169,5 +171,8 @@ bool subset(list p, list q) {
         return false;
     
     return subset(cdr(p), q);
-}
+} // NEEDS FIXING
 
+list permute(list p) {
+    
+}

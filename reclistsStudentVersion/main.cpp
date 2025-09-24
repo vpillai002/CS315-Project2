@@ -169,15 +169,15 @@ int main()
     // test_member();
     // test_last();
     // test_list_pair();
-    // test_firsts();
+    // test_firsts(); // check the test case with prof
     // test_flat();
-    // test_two_the_same(); // Should both lists be just lists of atoms 
+    test_two_the_same(); // NEEDS FIXING
     // test_equal();
     // test_total_reverse();
-    // test_shape(); // should atoms be () or no
+    // test_shape(); 
     // test_intersection();
     // test_list_union();
-    test_subset(); // DOES NOT WORK NEEDS FIXING
+    // test_subset(); // NEEDS FIXING
     
 
     return 0;
