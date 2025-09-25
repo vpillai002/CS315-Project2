@@ -5,6 +5,7 @@
 using namespace std;
 
 void test_is_lat() {
+    cout << "----Testing is_lat----" << endl;
     cout << "Enter testing list p: ";
     list p = read_list();
     cout << "Echoing p:";
@@ -13,6 +14,7 @@ void test_is_lat() {
 }
 
 void test_member() {
+    cout << "----Testing member----" << endl;
     cout << "Enter testing atom p: ";
     list p = read_list();
     cout << "Echoing p:";
@@ -27,6 +29,7 @@ void test_member() {
 }
 
 void test_last() {
+    cout << "----Testing last----" << endl;
     cout << "Enter testing list p: ";
     list p = read_list();
     cout << "Echoing p:";
@@ -37,6 +40,7 @@ void test_last() {
 }
 
 void test_list_pair() {
+    cout << "----Testing list_pair----" << endl;
     cout << "Enter testing list p: ";
     list p = read_list();
     cout << "Echoing p: ";
@@ -52,6 +56,7 @@ void test_list_pair() {
 }
 
 void test_firsts() {
+    cout << "----Testing firsts----" << endl;
     cout << "Enter testing list p: ";
     list p = read_list();
     cout << "Echoing p: ";
@@ -62,6 +67,7 @@ void test_firsts() {
 }
 
 void test_flat() {
+    cout << "----Testing flat----" << endl;
     cout << "Enter testing list p: ";
     list p = read_list();
     cout << "Echoing p: ";
@@ -72,6 +78,7 @@ void test_flat() {
 }
 
 void test_two_the_same() {
+    cout << "----Testing two_the_same----" << endl;
     cout << "Enter testing atom p: ";
     list p = read_list();
     cout << "Echoing p:";
@@ -86,6 +93,7 @@ void test_two_the_same() {
 }
 
 void test_equal() {
+    cout << "----Testing equal----" << endl;
     cout << "Enter testing atom p: ";
     list p = read_list();
     cout << "Echoing p:";
@@ -100,6 +108,7 @@ void test_equal() {
 }
 
 void test_total_reverse() {
+    cout << "----Testing total_reverse----" << endl;
     cout << "Enter testing list p: ";
     list p = read_list();
     cout << "Echoing p: ";
@@ -110,6 +119,7 @@ void test_total_reverse() {
 }
 
 void test_shape() {
+    cout << "----Testing shape----" << endl;
     cout << "Enter testing list p: ";
     list p = read_list();
     cout << "Echoing p: ";
@@ -120,6 +130,7 @@ void test_shape() {
 }
 
 void test_intersection() {
+    cout << "----Testing intersection----" << endl;
     cout << "Enter testing list p: ";
     list p = read_list();
     cout << "Echoing p: ";
@@ -135,6 +146,7 @@ void test_intersection() {
 }
 
 void test_list_union() {
+    cout << "----Testing list_union----" << endl;
     cout << "Enter testing list p: ";
     list p = read_list();
     cout << "Echoing p: ";
@@ -150,6 +162,7 @@ void test_list_union() {
 }
 
 void test_substitute() {
+    cout << "----Testing substitute----" << endl;
     cout << "Enter old: ";
     list old = read_list();
     
@@ -164,6 +177,7 @@ void test_substitute() {
 }   
 
 void test_remove() {
+    cout << "----Testing remove----" << endl;
     cout << "Enter testing list p: ";
     list p = read_list();
 
@@ -181,7 +195,8 @@ void test_remove() {
 }
 
 void test_subset() {
-    cout << "Enter testing atom p: ";
+    cout << "----Testing subset----" << endl;
+    cout << "Enter testing list p: ";
     list p = read_list();
     cout << "Echoing p:";
     write_list(p);
@@ -195,6 +210,7 @@ void test_subset() {
 }
 
 void test_permute() {
+    cout << "----Testing permute----" << endl;
     cout << "Enter testing list p: ";
     list p = read_list();
     cout << "Echoing p: ";
@@ -205,22 +221,65 @@ void test_permute() {
 }
 int main()
 {
-    // test_is_lat();
-    // test_member();
-    // test_last();
-    // test_list_pair();
-    // test_firsts(); // check the test case with prof
-    // test_flat();
-    // test_two_the_same();
-    // test_equal();
-    // test_total_reverse();
-    // test_shape(); 
-    // test_intersection();
-    // test_list_union();
-    // test_substitute();
-    // test_remove();
-    // test_subset();
-    // test_permute(); 
+    test_is_lat();
+    test_is_lat();
+    test_is_lat();
+    test_is_lat();
+    test_is_lat();
+
+    test_member();
+    test_member();
+    test_member();
+    
+    test_last();
+
+    test_list_pair();
+    test_list_pair();
+    test_list_pair();
+
+    test_firsts(); 
+    test_firsts(); 
+
+    test_flat();
+    test_flat();
+    test_flat();
+    test_flat();
+
+    test_two_the_same();
+    test_two_the_same();
+
+    test_equal();
+    test_equal();
+
+    test_total_reverse();
+    test_total_reverse();
+
+    test_shape(); 
+    test_shape(); 
+    test_shape(); 
+    test_shape(); 
+
+    test_intersection();
+    test_intersection();
+    test_intersection();
+    test_intersection();
+
+    test_list_union();
+    test_list_union();
+    test_list_union();
+    test_list_union();
+
+    test_substitute();
+
+    test_remove();
+
+    test_subset();
+    test_subset();
+    test_subset();
+    test_subset();
+    test_subset();
+
+    test_permute(); 
     
     return 0;
 }
