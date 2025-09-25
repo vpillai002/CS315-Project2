@@ -96,22 +96,34 @@ list flat(list p) {
 }
 
 bool two_the_same(list p, list q) {
-    if (is_null(p))
+    if (is_null(p) || is_null(q))
         return false;
-    if (member(car(p), q)) 
-        return true; 
+
+    if (is_atom(car(p))) {
+        if (member(car(p), q)) 
+            return true; 
+    }
+    else {
+        if (two_the_same(car(p), q))
+            return true;
+    }
+
     return two_the_same(cdr(p), q);
 }
 
 bool equal(list p, list q) {
     if (is_null(p) && is_null(q))
         return true;
+
     if (is_null(p) || is_null(q))
         return false;
+
     if (is_atom(p) && is_atom(q))
         return eq(p, q);
+
     if (is_atom(p) || is_atom(q))
         return false;
+
     return equal(car(p), car(q)) && equal(cdr(p), cdr(q));
 }
 

@@ -211,7 +211,7 @@ int main()
     // test_list_pair();
     // test_firsts(); // check the test case with prof
     // test_flat();
-    // test_two_the_same(); // NEEDS FIXING
+    // test_two_the_same();
     // test_equal();
     // test_total_reverse();
     // test_shape(); 
@@ -220,7 +220,7 @@ int main()
     // test_substitute();
     // test_remove();
     // test_subset();
-    test_permute(); 
+    // test_permute(); 
     
     return 0;
 }
