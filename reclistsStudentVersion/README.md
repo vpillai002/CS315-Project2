@@ -3,7 +3,7 @@
 ## Student Information
 Vishnu Pillai  
 008724619  
-https://github.com/vpillai002/project2
+https://github.com/vpillai002/CS315-Project2
 
 ## Collaboration and Sources
 I used my own ideas and code, lots of scratch paper to draw out logic was used. 
