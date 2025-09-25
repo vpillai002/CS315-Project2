@@ -163,6 +163,23 @@ void test_substitute() {
     write_list(substitute(old, replaced, p));
 }   
 
+void test_remove() {
+    cout << "Enter testing list p: ";
+    list p = read_list();
+
+    cout << "Echoing p: ";
+    write_list(p);
+
+    cout << "Enter atom 'a' to remove: ";
+    list a = read_list();
+
+    cout << "Echoing 'a': ";
+    write_list(a);
+
+    cout << "New list is: ";
+    write_list(remove(p, a));
+}
+
 void test_subset() {
     cout << "Enter testing atom p: ";
     list p = read_list();
@@ -192,6 +209,7 @@ int main()
     // test_intersection();
     // test_list_union();
     test_substitute();
+    test_remove();
     // test_subset(); 
     
 
