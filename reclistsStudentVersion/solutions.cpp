@@ -155,24 +155,31 @@ list list_union(list p, list q) {
     return cons(car(p), list_union(cdr(p), q));
 }
 
-list substitute(list old, list replace, list p) {
+// list substitute(list old, list replace, list p) {
 
-}
+// }
 
-list remove(list p, list a) {
+// list remove(list p, list a) {
 
-}
+// }
 
 bool subset(list p, list q) {
     if (is_null(p))
         return true; 
 
-    if (!member(car(p), q))
-        return false;
-    
-    return subset(cdr(p), q);
-} // NEEDS FIXING
+    if (is_atom(car(p))) {
+        if (!member(car(p), q))
+            return false;
+        
+    }
+    else {
+        if (!subset(car(p), q))
+            return false;
+    }
 
-list permute(list p) {
+    return subset(cdr(p), q);
+} 
+
+// list permute(list p) {
     
-}
+// }
