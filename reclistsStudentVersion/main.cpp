@@ -149,6 +149,20 @@ void test_list_union() {
     write_list(list_union(p, q));
 }
 
+void test_substitute() {
+    cout << "Enter old: ";
+    list old = read_list();
+    
+    cout << "Enter new: ";
+    list replaced = read_list();
+
+    cout << "Enter testing list p: ";
+    list p = read_list();
+
+    cout << "New list is: ";
+    write_list(substitute(old, replaced, p));
+}   
+
 void test_subset() {
     cout << "Enter testing atom p: ";
     list p = read_list();
@@ -171,13 +185,14 @@ int main()
     // test_list_pair();
     // test_firsts(); // check the test case with prof
     // test_flat();
-    test_two_the_same(); // NEEDS FIXING
+    // test_two_the_same(); // NEEDS FIXING
     // test_equal();
     // test_total_reverse();
     // test_shape(); 
     // test_intersection();
     // test_list_union();
-    // test_subset(); // NEEDS FIXING
+    test_substitute();
+    // test_subset(); 
     
 
     return 0;

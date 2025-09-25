@@ -155,9 +155,20 @@ list list_union(list p, list q) {
     return cons(car(p), list_union(cdr(p), q));
 }
 
-// list substitute(list old, list replace, list p) {
-
-// }
+list substitute(list old, list replaced, list p) {
+    if (is_null(p)) 
+        return null();
+    
+    if (is_atom(car(p))) { // replace the found atom with replaced
+        if (eq(car(p), old)) 
+            return cons(replaced, substitute(old, replaced, cdr(p))); 
+        else
+            return cons(car(p), substitute(old, replaced, cdr(p)));
+    }
+    else { // car(p) is a list, recurse through that
+        return cons(substitute(old, replaced, car(p)), substitute(old, replaced, car(p)));
+    }
+}
 
 // list remove(list p, list a) {
 

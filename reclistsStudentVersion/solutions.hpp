@@ -20,7 +20,7 @@ list total_reverse(list p);
 list shape(list p);
 list intersection(list p, list q);
 list list_union(list p, list q);
-list substitute(list old, list replace, list p);
+list substitute(list old, list replaced, list p);
 list remove(list p, list a);
 bool subset(list p, list q);
 list permute(list p);
