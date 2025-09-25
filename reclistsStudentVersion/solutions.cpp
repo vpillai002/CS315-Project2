@@ -192,6 +192,42 @@ bool subset(list p, list q) {
     return subset(cdr(p), q);
 } 
 
-// list permute(list p) {
+list remove_one(list p, list a) {
+    // difference from other remove function is this 
+    // only removes one instance instead of all
+    // instances of atom a
     
-// }
+    if (is_null(p))
+        return null(); // empty list 
+
+    if (eq(car(p), a))
+        return cdr(p); 
+
+    return cons(car(p), remove_one(cdr(p), a));    
+}
+
+list add_to_all(list x, list perms) {
+    if (is_null(perms))
+        return null();
+
+    return cons(cons(x, car(perms)), add_to_all(x, cdr(perms)));
+}
+
+list permute_helper(list rem, list original) {
+    if (is_null(rem)) 
+        return null();
+    
+    list x = car(rem);
+    list xs = remove_one(original, x);
+    list perms = permute(xs);
+    list with_x = add_to_all(x, perms);
+
+    return append(with_x, permute_helper(cdr(rem), original));
+}
+
+list permute(list p) {        
+    if (is_null(p))
+        return cons(null(), null());
+
+    return permute_helper(p, p);
+}

@@ -194,6 +194,15 @@ void test_subset() {
     cout << (subset(p, q) ? "True!" : "False!") << endl;
 }
 
+void test_permute() {
+    cout << "Enter testing list p: ";
+    list p = read_list();
+    cout << "Echoing p: ";
+    write_list(p);
+
+    cout << "Permutations include: ";
+    write_list(permute(p));
+}
 int main()
 {
     // test_is_lat();
@@ -208,10 +217,10 @@ int main()
     // test_shape(); 
     // test_intersection();
     // test_list_union();
-    test_substitute();
-    test_remove();
-    // test_subset(); 
+    // test_substitute();
+    // test_remove();
+    // test_subset();
+    test_permute(); 
     
-
     return 0;
 }
